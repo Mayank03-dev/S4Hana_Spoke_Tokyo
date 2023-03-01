@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDe92a983ec23c21107792f53a59041dae</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>866b1c231bf19010d2cf7669cc4bcba5</scope_name>
+        <serialized_content>{"FlowDesigner:FDe92a983ec23c21107792f53a59041dae":{"$COCollectionField":[{"Object":{}}],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDe92a983ec23c21107792f53a59041dae.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Adoption of Price from Last Document\",\"mandatory\":\"false\",\"child_name\":\"adoption_of_price_from_last_document_child0\",\"uiUniqueId\":\"3cafc5cb-bf98-4ba5-bc84-29e967763886\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDe92a983ec23c21107792f53a59041dae\",\"child_label\":\"Adoption of Price from Last Document_child0\",\"child_type_label\":\"Object\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"12\",\"max_length\":\"0\",\"child_uiUniqueId\":\"a8f7b700-d864-4929-ad24-865edd48f012\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>Akash</sys_created_by>
+        <sys_created_on>2023-02-07 09:50:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ad2a983e473c21108cf13c72846d43ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDe92a983ec23c21107792f53a59041dae</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SAP S4 HANA RFC Spoke" source="sn_sap_s4_hana_rfc">866b1c231bf19010d2cf7669cc4bcba5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
+        <sys_update_name>sys_complex_object_ad2a983e473c21108cf13c72846d43ae</sys_update_name>
+        <sys_updated_by>Akash</sys_updated_by>
+        <sys_updated_on>2023-02-07 09:50:00</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD70fda8ba867c2110b0225250c2dd47dc</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>866b1c231bf19010d2cf7669cc4bcba5</scope_name>
+        <serialized_content>{"FlowDesigner:FD70fda8ba867c2110b0225250c2dd47dc":{"$COCollectionField":[{"Object":{}}],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD70fda8ba867c2110b0225250c2dd47dc.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Adoption of Price from Last Document\",\"mandatory\":\"false\",\"child_name\":\"variable_child0\",\"uiUniqueId\":\"fee326b3-bbf8-48bd-9f4f-c16710faea11\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD70fda8ba867c2110b0225250c2dd47dc\",\"child_label\":\"variable_child0\",\"child_type_label\":\"Object\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"13\",\"max_length\":\"0\",\"child_uiUniqueId\":\"707486e7-cace-4797-949e-82b9e0e6c11e\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>Akash</sys_created_by>
+        <sys_created_on>2023-02-07 11:16:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>34fda8ba477c21108cf13c72846d43dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD70fda8ba867c2110b0225250c2dd47dc</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SAP S4 HANA RFC Spoke" source="sn_sap_s4_hana_rfc">866b1c231bf19010d2cf7669cc4bcba5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
+        <sys_update_name>sys_complex_object_34fda8ba477c21108cf13c72846d43dc</sys_update_name>
+        <sys_updated_by>Akash</sys_updated_by>
+        <sys_updated_on>2023-02-07 11:16:31</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>
