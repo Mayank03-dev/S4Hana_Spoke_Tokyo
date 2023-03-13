@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD178139f9ab59291022a2e4487d845a18</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>866b1c231bf19010d2cf7669cc4bcba5</scope_name>
+        <serialized_content>{"FlowDesigner:FD178139f9ab59291022a2e4487d845a18":{},"FlowDesigner:FD178139f9ab59291022a2e4487d845a18.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD178139f9ab59291022a2e4487d845a18\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"PO Header\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"65000\",\"uiUniqueId\":\"38b609d4-3afd-4bbc-834f-8efba8ea5f4c\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>krishna</sys_created_by>
+        <sys_created_on>2023-03-01 10:09:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d78139f947592910ea1b3085d36d4318</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD178139f9ab59291022a2e4487d845a18</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SAP S4 HANA RFC Spoke" source="sn_sap_s4_hana_rfc">866b1c231bf19010d2cf7669cc4bcba5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
+        <sys_update_name>sys_complex_object_d78139f947592910ea1b3085d36d4318</sys_update_name>
+        <sys_updated_by>krishna</sys_updated_by>
+        <sys_updated_on>2023-03-01 10:09:21</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>

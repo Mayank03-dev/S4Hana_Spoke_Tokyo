@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2023-03-10 07:21:27">
+<sn_sap_s4_hana_rfc_sap_s_4hana_rfc_list action="INSERT_OR_UPDATE">
+<application_component>MISC</application_component>
+<enabled>true</enabled>
+<name>ZSN_BAPI_GET_DATA</name>
+<operation_type>read</operation_type>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2023-03-06 13:58:32</sys_created_on>
+<sys_id>49d5d0ebc3d161109954f44ed401310d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2023-03-06 13:58:32</sys_updated_on>
+<ui_label>MISC - ZSN_BAPI_GET_DATA</ui_label>
+</sn_sap_s4_hana_rfc_sap_s_4hana_rfc_list>
+</unload>
