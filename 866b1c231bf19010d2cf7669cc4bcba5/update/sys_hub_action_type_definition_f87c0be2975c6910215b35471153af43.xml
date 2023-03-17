@@ -10,10 +10,10 @@
         <category display_value="Procurement">32fd9f121b016810d2cf7669cc4bcba9</category>
         <copied_from/>
         <copied_from_name/>
-        <description>&lt;p&gt;Retrieves vendors details from SAP S4 HANA RFC.&lt;/p&gt;
+        <description>&lt;p&gt;Retrieves vendors details from SAP S/4HANA - RFC.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Inputs&amp;nbsp;&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Connection Alias&lt;/strong&gt;&amp;nbsp;- Connection alias for SAP S4 HANA - RFC.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Connection Alias&lt;/strong&gt;&amp;nbsp;- Connection alias for SAP S/4HANA - RFC.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Initial Load&lt;/strong&gt;&amp;nbsp;- Defines whether the action request is for full load or delta load.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Row Skip&lt;/strong&gt;&amp;nbsp;-&amp;nbsp;Specifies&amp;nbsp;the rows that should be&amp;nbsp;skipped and retrieves&amp;nbsp;the next set of output rows based on row count. Default value is zero.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Row Count&lt;/strong&gt;&amp;nbsp;- Number of rows to be retrieved from the table.&lt;/li&gt;
@@ -364,15 +364,15 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt;&amp;nbsp;- If the request is executed successfully, Status is set to &amp;ldquo;Success&amp;rdquo;. If there is a failure in SAP S4 HANA - RFC, Status is set to &amp;ldquo;Error&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt;&amp;nbsp;- If the request is executed successfully, Status is set to &amp;ldquo;Success&amp;rdquo;. If there is a failure in SAP S/4HANA - RFC, Status is set to &amp;ldquo;Error&amp;rdquo;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Error&lt;/strong&gt;&amp;nbsp;- Reason for error. Populated only when an error occurs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Error Messages&lt;/strong&gt;&amp;nbsp;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;No or empty response received from SAP S4 HANA - RFC.&lt;/li&gt;
+&lt;li&gt;No or empty response received from SAP S/4HANA - RFC.&lt;/li&gt;
 &lt;li&gt;Encountered an error. Check log for more details.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;To use this action, the corresponding SAP S4 HANA RFC connection and credential must be created and associated with the SAP S4 HANA RFC Connection &amp;amp; Credential alias. &lt;a href="http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias" target="_blank"&gt;Learn More&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To use this action, the corresponding SAP S/4HANA - RFC connection and credential must be created and associated with the SAP S/4HANA - RFC Connection &amp;amp; Credential alias. &lt;a href="http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias" target="_blank"&gt;Learn More&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>false</ih_action>
         <internal_name>look_up_vendors</internal_name>
@@ -390,7 +390,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f87c0be2975c6910215b35471153af43</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Look up Vendors</sys_name>
         <sys_overrides/>
         <sys_package display_value="SAP S4 HANA RFC Spoke" source="sn_sap_s4_hana_rfc">866b1c231bf19010d2cf7669cc4bcba5</sys_package>
@@ -398,7 +398,7 @@
         <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_f87c0be2975c6910215b35471153af43</sys_update_name>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-03-07 09:43:35</sys_updated_on>
+        <sys_updated_on>2023-03-13 08:42:55</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -4628,17 +4628,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Look up Vendors">f87c0be2975c6910215b35471153af43</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"1e35dbaa975c6910215b35471153af94","name":"plan","plan_signature":null}}</plan>
-        <snapshot>d035a873c3996110d35cf44ed401311b</snapshot>
+        <snapshot>8ad01b25c36da510d35cf44ed4013100</snapshot>
         <sys_created_by>prama</sys_created_by>
         <sys_created_on>2023-01-13 08:17:27</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1e35dbaa975c6910215b35471153af94</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-03-07 09:43:39</sys_updated_on>
+        <sys_updated_on>2023-03-13 08:42:59</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -4650,10 +4650,10 @@
         <category display_value="Procurement">32fd9f121b016810d2cf7669cc4bcba9</category>
         <copied_from/>
         <copied_from_name/>
-        <description>&lt;p&gt;Retrieves vendors details from SAP S4 HANA RFC.&lt;/p&gt;
+        <description>&lt;p&gt;Retrieves vendors details from SAP S/4HANA - RFC.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Inputs&amp;nbsp;&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Connection Alias&lt;/strong&gt;&amp;nbsp;- Connection alias for SAP S4 HANA - RFC.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Connection Alias&lt;/strong&gt;&amp;nbsp;- Connection alias for SAP S/4HANA - RFC.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Initial Load&lt;/strong&gt;&amp;nbsp;- Defines whether the action request is for full load or delta load.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Row Skip&lt;/strong&gt;&amp;nbsp;-&amp;nbsp;Specifies&amp;nbsp;the rows that should be&amp;nbsp;skipped and retrieves&amp;nbsp;the next set of output rows based on row count. Default value is zero.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Row Count&lt;/strong&gt;&amp;nbsp;- Number of rows to be retrieved from the table.&lt;/li&gt;
@@ -5004,15 +5004,15 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt;&amp;nbsp;- If the request is executed successfully, Status is set to &amp;ldquo;Success&amp;rdquo;. If there is a failure in SAP S4 HANA - RFC, Status is set to &amp;ldquo;Error&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt;&amp;nbsp;- If the request is executed successfully, Status is set to &amp;ldquo;Success&amp;rdquo;. If there is a failure in SAP S/4HANA - RFC, Status is set to &amp;ldquo;Error&amp;rdquo;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Error&lt;/strong&gt;&amp;nbsp;- Reason for error. Populated only when an error occurs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Error Messages&lt;/strong&gt;&amp;nbsp;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;No or empty response received from SAP S4 HANA - RFC.&lt;/li&gt;
+&lt;li&gt;No or empty response received from SAP S/4HANA - RFC.&lt;/li&gt;
 &lt;li&gt;Encountered an error. Check log for more details.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;To use this action, the corresponding SAP S4 HANA RFC connection and credential must be created and associated with the SAP S4 HANA RFC Connection &amp;amp; Credential alias. &lt;a href="http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias" target="_blank"&gt;Learn More&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To use this action, the corresponding SAP S/4HANA - RFC connection and credential must be created and associated with the SAP S/4HANA - RFC Connection &amp;amp; Credential alias. &lt;a href="http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias" target="_blank"&gt;Learn More&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use. &lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>look_up_vendors</internal_name>
         <label_cache>[{"name":"{{action.conn_alias.sys_id}}","label":"action➛Connection Alias➛Sys ID","type":"action","ref":"","reference_display":"Sys ID","base_type":"GUID","parent_table_name":"sys_alias","column_name":"sys_id","choices":null,"attributes":{}},{"name":"{{action.initial_load}}","label":"action➛Initial Load","type":"action","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"f42a7368-2774-43ee-aef5-d026fffc4183"}},{"name":"{{action.row_skip}}","label":"action➛Row Skip","type":"action","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"1c873678-104d-49b7-ad9e-0c1140691629"}},{"name":"{{action.row_count}}","label":"action➛Row Count","type":"action","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"a618c70d-552a-4165-a62d-a696b28e6e93"}},{"name":"{{action.company_code_criteria}}","label":"action➛Company Code Criteria","type":"action","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FD7efd0726f65c6910c911c2465786342b","child_label":"Item","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"Item","child_uiUniqueId":"bed725d6-1495-4010-8b96-3dc44d222ac7","uiUniqueId":"4a926e86-fdb3-44ba-a5db-2465245a5bd6"}},{"name":"{{action.load_complete}}","label":"action➛Load Complete","type":"action","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"997c9c53-2c1c-469a-80a3-2a81dff11e90"}},{"name":"{{step[e6b32b4f-7843-4140-9ac6-02040a14e6bf].cred_id}}","label":"step➛Pre Processing➛Credential ID","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"e47987a4-3ddf-417c-a93f-3e3570f9b2c9"}},{"name":"{{step[e6b32b4f-7843-4140-9ac6-02040a14e6bf].conn_host}}","label":"step➛Pre Processing➛Connection Host","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"960dec6b-f206-4321-b17a-a37cfcce09ed"}},{"name":"{{step[e6b32b4f-7843-4140-9ac6-02040a14e6bf].conn_params}}","label":"step➛Pre Processing➛Connection Parameters","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"044551d6-665c-4825-aa1e-9a46b785559c"}},{"name":"{{step[e6b32b4f-7843-4140-9ac6-02040a14e6bf].payload}}","label":"step➛Pre Processing➛Payload","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"fb1b4709-b5db-4021-9faa-0989239a14f0"}},{"name":"{{step[c6de3e74-bbc1-4839-a1b0-e6a9bfe230c4].status}}","label":"step➛Look up Vendors➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"74ef03df-c724-4d99-918d-84a2f8bf5afe"}},{"name":"{{step[c6de3e74-bbc1-4839-a1b0-e6a9bfe230c4].response}}","label":"step➛Look up Vendors➛Response","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3f15e3b1-1b12-4bed-b2fc-390725fbe7fa"}},{"name":"{{step[ab61e7b3-31df-44c5-852c-4a2f93d3ef61].ET_VENDOR}}","label":"step➛Post Processing➛Vendor Details","type":"step","ref":"","reference_display":"","base_type":"array.object","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FD28515be66a5c69109b975b22ba3fd5ec","child_label":"Vendor","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.object","child_type":"object","child_name":"Vendor","child_uiUniqueId":"eae1ecd5-dfb7-4865-a640-7735baadf3da","uiUniqueId":"d8f6eabe-f245-4592-a637-778c68e84211"}},{"name":"{{step[ab61e7b3-31df-44c5-852c-4a2f93d3ef61].ET_TOTAL_ROWS}}","label":"step➛Post Processing➛Total Rows","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"24d7804b-e28c-40c2-a450-31496b1ae11e"}},{"name":"{{step[ab61e7b3-31df-44c5-852c-4a2f93d3ef61].status}}","label":"step➛Post Processing➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"d208da1f-485d-435d-8657-dcd18a9fcef0"}},{"name":"{{step[ab61e7b3-31df-44c5-852c-4a2f93d3ef61].error}}","label":"step➛Post Processing➛Error","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"81716dcf-f72a-4a51-86ed-dbda6337d4f7"}}]</label_cache>
@@ -5028,7 +5028,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f9255baa975c6910215b35471153af6d</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -5036,7 +5036,7 @@
         <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
         <sys_update_name/>
         <sys_updated_by>Prama</sys_updated_by>
-        <sys_updated_on>2023-03-07 09:43:31</sys_updated_on>
+        <sys_updated_on>2023-03-13 08:42:52</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>

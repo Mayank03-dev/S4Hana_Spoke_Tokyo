@@ -537,54 +537,50 @@ SapRFCUtil.checkEmptyProperties = function(obj) {
     return true;
 };
 
-SapRFCUtil.vendorPayload = function(obj) {
-    Object.keys(obj).forEach(function(key) {
-        if (obj[key] && typeof obj[key] === 'object') {
-            SapRFCUtil.vendorPayload(obj[key]);
-            if (Object.keys(obj[key]).length === 0) {
-                delete obj[key];
-            }
-        } else if (obj[key] === '' || key === 'name$') {
-            delete obj[key];
-        }
-    });
-};
-
-
 
 SapRFCUtil.getVendorErrors = function(resp) {
-    var statusObj = {};
-    var et_success = "";
-    var arr = resp.ET_RETURN;
-    for (var i = 0; i < arr.length; i++) {
-        for (var k in arr[i]) {
-            if (arr[i][k] == "S") {
-                et_success = "S";
-                statusObj.response = arr[i]['MESSAGE_V1'];
-                statusObj.status = "Success";
-                statusObj.err = "";
-            }
-        }
-    }
-    if (!et_success) {
-        var errStatusObj = SapRFCUtil.getReturnErrors(resp);
-        statusObj.status = errStatusObj.status;
-        statusObj.err = errStatusObj.err;
-        statusObj.response = "";
-    }
-    return statusObj;
+	var statusObj = {};
+	var et_success = "";
+	var arr = resp.ET_RETURN;
+	for (var i = 0; i < arr.length; i++) {
+		for (var k in arr[i]) {
+			if(arr[i][k] == "E" || arr[i][k] == "A"){
+				et_success = "E";
+				break;
+			}
+			if (arr[i][k] == "S") {
+				et_success = "S";
+				statusObj.response = arr[i]['MESSAGE_V1'];
+				statusObj.status = "success";
+				statusObj.err = "";
+			}
+		}
+	}
+	if (et_success == "E") {
+		var errStatusObj = SapRFCUtil.getReturnErrors(resp);
+		statusObj.status = errStatusObj.status;
+		statusObj.err = errStatusObj.err;
+		statusObj.response = "";
+	}
+	return statusObj;
+};
+
+SapRFCUtil.getDateFormat = function(dat) {
+	var gd = new GlideDate();
+	gd.setValue(dat);
+	return gd.getByFormat("yyyyMMdd");
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-07-13 09:09:42</sys_created_on>
         <sys_id>0dd368e81b421410d2cf7669cc4bcb73</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>46</sys_mod_count>
         <sys_name>SapRFCUtil</sys_name>
         <sys_package display_value="SAP S4 HANA RFC Spoke" source="sn_sap_s4_hana_rfc">866b1c231bf19010d2cf7669cc4bcba5</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
         <sys_update_name>sys_script_include_0dd368e81b421410d2cf7669cc4bcb73</sys_update_name>
-        <sys_updated_by>varun</sys_updated_by>
-        <sys_updated_on>2023-03-09 13:46:46</sys_updated_on>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-03-16 14:07:57</sys_updated_on>
     </sys_script_include>
 </record_update>

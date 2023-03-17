@@ -23,14 +23,16 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Outputs :&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cancel Invoice&lt;/strong&gt;  - Cancel invoice document details.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; - If the request is executed successfully, Status is set to “Success”. If there is a failure in SAP S/4HANA - RFC, Status is set to “Error”.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cancel Invoice&lt;/strong&gt; - Cancel invoice document details.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; - If the request is executed successfully, Status is set to &amp;ldquo;Success&amp;rdquo;. If there is a failure in SAP S/4HANA - RFC, Status is set to &amp;ldquo;Error&amp;rdquo;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Error Message&lt;/strong&gt; - Reason for error as returned from SAP S/4HANA - RFC in the RETURN object. Populated only when an error occurs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Error Messages&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Encountered an error. Check log for more details.&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+&lt;p&gt;To use this action, the corresponding SAP S/4HANA - RFC&lt;strong&gt;.&lt;/strong&gt;&amp;nbsp;connection and credential must be created and associated with the SAP_S4HANA_RFC Connection &amp;amp; Credential alias.&amp;nbsp;&lt;a href="http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias" target="_blank"&gt;Learn More&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use.&amp;nbsp;&lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>false</ih_action>
         <internal_name>cancel_invoice_v2</internal_name>
         <label_cache>[{"name":"{{action.select_bapi}}","label":"action➛Select BAPI","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Standard BAPI","value":"BAPI_INCOMINGINVOICE_CANCEL","order":0.0},{"label":"Custom BAPI","value":"ZSN_BAPI_INCOMINGINV_CANCEL","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"ed50b03b-fcd9-41a4-9780-6783a571d931"}},{"name":"{{action.conn_alias.sys_id}}","label":"action➛Connection Alias➛Sys ID","type":"action","ref":"","reference_display":"Sys ID","base_type":"GUID","parent_table_name":"sys_alias","column_name":"sys_id","choices":null,"attributes":{}},{"name":"{{action.additional_input}}","label":"action➛Additional Fields","type":"action","ref":"","reference_display":"","base_type":"dynamic_template","parent_table_name":"","column_name":"","choices":null,"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","dynamic":"true","uiUniqueId":"a4d6936c-ab7c-4329-804f-b5de6d15d272"}},{"name":"{{action.INVOICEDOCNUMBER}}","label":"action➛Invoice Document Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"75db3884-d4fc-483d-8be1-1eb8c6251a60"}},{"name":"{{action.FISCALYEAR}}","label":"action➛Fiscal Year","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"a54bc885-68e6-4625-b141-9325b6f5b225"}},{"name":"{{action.REASONREVERSAL}}","label":"action➛Reversal Reason","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3ecfbcac-f5c2-4009-b52f-ddf6c2b3e8b2"}},{"name":"{{action.POSTINGDATE}}","label":"action➛Reversal Document Posting Date","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"f8bbbb4d-22aa-4be2-b13f-3581058b153f"}},{"name":"{{step[67493cc7-ec13-4d37-92f0-9d3c3e78710f].cred_id}}","label":"step➛Get connection &amp; prepare input Json➛Credential ID","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3ecd10da-6d50-4540-962f-b4595d4a5ee1"}},{"name":"{{step[67493cc7-ec13-4d37-92f0-9d3c3e78710f].conn_host}}","label":"step➛Get connection &amp; prepare input Json➛Connection Host","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"f47088f9-fc87-4878-bf06-4c22465a5ad0"}},{"name":"{{step[67493cc7-ec13-4d37-92f0-9d3c3e78710f].payload}}","label":"step➛Get connection &amp; prepare input Json➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"31ab0c6f-d46e-4986-b654-82c430cdaa2a"}},{"name":"{{step[67493cc7-ec13-4d37-92f0-9d3c3e78710f].conn_params}}","label":"step➛Get connection &amp; prepare input Json➛Connection Parameters","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"8f15e3d3-60ff-428d-9466-dbbf5835ada0"}},{"name":"{{step[6035dc13-58b1-4fe5-a561-0de056ec3b63].response}}","label":"step➛Ping and Query SAP➛Response","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"68176fff-6a35-4fcd-a943-b72bd97c75bf"}},{"name":"{{step[6035dc13-58b1-4fe5-a561-0de056ec3b63].status}}","label":"step➛Ping and Query SAP➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"58746837-e816-40ea-98bf-23fae4232ee8"}},{"name":"{{step[32edcf84-b6a1-4e72-84c2-ea0185522e2b].response}}","label":"step➛Post process response➛Response","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"cabba281-0a1e-4717-9198-432e6efd3a0d"}},{"name":"{{step[32edcf84-b6a1-4e72-84c2-ea0185522e2b].status}}","label":"step➛Post process response➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"97f2d99c-97ee-4699-9526-52b9091b9dc9"}},{"name":"{{step[32edcf84-b6a1-4e72-84c2-ea0185522e2b].err}}","label":"step➛Post process response➛Error Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"8bf4a0fe-8595-4301-890d-c4b94610a8c0"}}]</label_cache>
@@ -47,15 +49,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e855bfa087cd651026b699b83cbb353e</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Cancel Invoice</sys_name>
         <sys_overrides/>
         <sys_package display_value="SAP S4 HANA RFC Spoke" source="sn_sap_s4_hana_rfc">866b1c231bf19010d2cf7669cc4bcba5</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_e855bfa087cd651026b699b83cbb353e</sys_update_name>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:39</sys_updated_on>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:46:33</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -583,14 +585,14 @@
         <sys_created_by>Anusha</sys_created_by>
         <sys_created_on>2023-02-13 12:50:55</sys_created_on>
         <sys_id>061dbf2887cd651026b699b83cbb3546</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:29</sys_updated_on>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:46:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1749,10 +1751,10 @@
         <sys_created_by>Anusha</sys_created_by>
         <sys_created_on>2023-02-13 12:35:40</sys_created_on>
         <sys_id>ee99b3a487cd651026b699b83cbb3586</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
-        <sys_updated_by>Akash</sys_updated_by>
-        <sys_updated_on>2023-02-20 05:57:20</sys_updated_on>
+        <sys_updated_by>akash</sys_updated_by>
+        <sys_updated_on>2023-03-14 08:06:25</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ee99b3a487cd651026b699b83cbb3586"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1777,20 +1779,20 @@
         <sys_created_by>Anusha</sys_created_by>
         <sys_created_on>2023-02-13 12:35:41</sys_created_on>
         <sys_id>8f99b3a487cd651026b699b83cbb3596</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>Akash</sys_updated_by>
-        <sys_updated_on>2023-02-20 05:57:20</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>akash</sys_updated_by>
+        <sys_updated_on>2023-03-14 08:06:25</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     try {
       	var inputs = SapRFCUtil.trimInputs(inputs);
-      	
+      	 
         //Validate mandatory fields
         var mandatoryFieldsList = {
             "Invoice Document Number": inputs.invoiceDocNumber,
             "Fiscal Year": inputs.fiscalYear,
             "Reversal Reason": inputs.reversalReason,
             "Reversal Document Posting Date": inputs.postingDate
-        };
+        }; 
 
         var emptyFields = SapRFCUtil.checkMandatoryFields(mandatoryFieldsList);
         if (JSUtil.notNil(emptyFields)) {
@@ -1956,6 +1958,18 @@
         <sys_updated_on>2023-02-20 05:50:04</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_ee99b3a487cd651026b699b83cbb3586</table>
         <value>{{action.REASONREVERSAL}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>ee99b3a487cd651026b699b83cbb3586</id>
+        <sys_created_by>akash</sys_created_by>
+        <sys_created_on>2023-03-14 07:51:55</sys_created_on>
+        <sys_id>30ce8802c32d2910665b9d777d0131d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>akash</sys_updated_by>
+        <sys_updated_on>2023-03-14 07:51:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_ee99b3a487cd651026b699b83cbb3586^id=ee99b3a487cd651026b699b83cbb3586"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=ee99b3a487cd651026b699b83cbb3586"/>
@@ -2521,14 +2535,14 @@
         <sys_created_by>Anusha</sys_created_by>
         <sys_created_on>2023-02-13 12:43:23</sys_created_on>
         <sys_id>fb5b3be487cd651026b699b83cbb35ca</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:28</sys_updated_on>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:46:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3564,9 +3578,9 @@
         <sys_created_by>Anusha</sys_created_by>
         <sys_created_on>2023-02-14 11:45:50</sys_created_on>
         <sys_id>aec7b485874da51026b699b83cbb35c5</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:28</sys_updated_on>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:46:24</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=aec7b485874da51026b699b83cbb35c5"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3689,9 +3703,9 @@
         <sys_created_by>Anusha</sys_created_by>
         <sys_created_on>2023-02-14 11:45:51</sys_created_on>
         <sys_id>7ac7b485874da51026b699b83cbb35cb</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:28</sys_updated_on>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:46:24</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7ac7b485874da51026b699b83cbb35cb"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4092,9 +4106,9 @@
         <sys_created_by>Anusha</sys_created_by>
         <sys_created_on>2023-02-14 11:45:54</sys_created_on>
         <sys_id>97c7f485874da51026b699b83cbb3528</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:30</sys_updated_on>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:46:25</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=97c7f485874da51026b699b83cbb3528"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4671,17 +4685,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Cancel Invoice">e855bfa087cd651026b699b83cbb353e</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"e82812f247cd61108cf13c72846d4351","name":"plan","plan_signature":null}}</plan>
-        <snapshot>2c30b477c3dd6110665b9d777d0131cc</snapshot>
+        <snapshot>34bc740bc3ede910665b9d777d013116</snapshot>
         <sys_created_by>Akash</sys_created_by>
         <sys_created_on>2023-02-20 05:16:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e82812f247cd61108cf13c72846d4351</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:44</sys_updated_on>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:46:37</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -4706,14 +4720,16 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Outputs :&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cancel Invoice&lt;/strong&gt;  - Cancel invoice document details.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; - If the request is executed successfully, Status is set to “Success”. If there is a failure in SAP S/4HANA - RFC, Status is set to “Error”.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cancel Invoice&lt;/strong&gt; - Cancel invoice document details.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt; - If the request is executed successfully, Status is set to &amp;ldquo;Success&amp;rdquo;. If there is a failure in SAP S/4HANA - RFC, Status is set to &amp;ldquo;Error&amp;rdquo;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Error Message&lt;/strong&gt; - Reason for error as returned from SAP S/4HANA - RFC in the RETURN object. Populated only when an error occurs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Error Messages&lt;/strong&gt; :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Encountered an error. Check log for more details.&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+&lt;p&gt;To use this action, the corresponding SAP S/4HANA - RFC&lt;strong&gt;.&lt;/strong&gt;&amp;nbsp;connection and credential must be created and associated with the SAP_S4HANA_RFC Connection &amp;amp; Credential alias.&amp;nbsp;&lt;a href="http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias" target="_blank"&gt;Learn More&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Requires a subscription for production use.&amp;nbsp;&lt;a href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information" target="_blank"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>cancel_invoice</internal_name>
         <label_cache>[{"name":"{{action.select_bapi}}","label":"action➛Select BAPI","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Standard BAPI","value":"BAPI_INCOMINGINVOICE_CANCEL","order":0.0},{"label":"Custom BAPI","value":"ZSN_BAPI_INCOMINGINV_CANCEL","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"ed50b03b-fcd9-41a4-9780-6783a571d931"}},{"name":"{{action.conn_alias.sys_id}}","label":"action➛Connection Alias➛Sys ID","type":"action","ref":"","reference_display":"Sys ID","base_type":"GUID","parent_table_name":"sys_alias","column_name":"sys_id","choices":null,"attributes":{}},{"name":"{{action.additional_input}}","label":"action➛Additional Fields","type":"action","ref":"","reference_display":"","base_type":"dynamic_template","parent_table_name":"","column_name":"","choices":null,"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","dynamic":"true","uiUniqueId":"a4d6936c-ab7c-4329-804f-b5de6d15d272"}},{"name":"{{action.INVOICEDOCNUMBER}}","label":"action➛Invoice Document Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"75db3884-d4fc-483d-8be1-1eb8c6251a60"}},{"name":"{{action.FISCALYEAR}}","label":"action➛Fiscal Year","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"a54bc885-68e6-4625-b141-9325b6f5b225"}},{"name":"{{action.REASONREVERSAL}}","label":"action➛Reversal Reason","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3ecfbcac-f5c2-4009-b52f-ddf6c2b3e8b2"}},{"name":"{{action.POSTINGDATE}}","label":"action➛Reversal Document Posting Date","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"f8bbbb4d-22aa-4be2-b13f-3581058b153f"}},{"name":"{{step[67493cc7-ec13-4d37-92f0-9d3c3e78710f].cred_id}}","label":"step➛Get connection &amp; prepare input Json➛Credential ID","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3ecd10da-6d50-4540-962f-b4595d4a5ee1"}},{"name":"{{step[67493cc7-ec13-4d37-92f0-9d3c3e78710f].conn_host}}","label":"step➛Get connection &amp; prepare input Json➛Connection Host","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"f47088f9-fc87-4878-bf06-4c22465a5ad0"}},{"name":"{{step[67493cc7-ec13-4d37-92f0-9d3c3e78710f].payload}}","label":"step➛Get connection &amp; prepare input Json➛Payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"31ab0c6f-d46e-4986-b654-82c430cdaa2a"}},{"name":"{{step[67493cc7-ec13-4d37-92f0-9d3c3e78710f].conn_params}}","label":"step➛Get connection &amp; prepare input Json➛Connection Parameters","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"8f15e3d3-60ff-428d-9466-dbbf5835ada0"}},{"name":"{{step[6035dc13-58b1-4fe5-a561-0de056ec3b63].response}}","label":"step➛Ping and Query SAP➛Response","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"68176fff-6a35-4fcd-a943-b72bd97c75bf"}},{"name":"{{step[6035dc13-58b1-4fe5-a561-0de056ec3b63].status}}","label":"step➛Ping and Query SAP➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"58746837-e816-40ea-98bf-23fae4232ee8"}},{"name":"{{step[32edcf84-b6a1-4e72-84c2-ea0185522e2b].response}}","label":"step➛Post process response➛Response","type":"step","ref":"","reference_display":"","base_type":"json","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"cabba281-0a1e-4717-9198-432e6efd3a0d"}},{"name":"{{step[32edcf84-b6a1-4e72-84c2-ea0185522e2b].status}}","label":"step➛Post process response➛Status","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"97f2d99c-97ee-4699-9526-52b9091b9dc9"}},{"name":"{{step[32edcf84-b6a1-4e72-84c2-ea0185522e2b].err}}","label":"step➛Post process response➛Error Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"8bf4a0fe-8595-4301-890d-c4b94610a8c0"}}]</label_cache>
         <master>true</master>
@@ -4728,15 +4744,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>37085eb247cd61108cf13c72846d43c0</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:36</sys_updated_on>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:45:47</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -4863,10 +4879,10 @@
         <sys_created_by>Akash</sys_created_by>
         <sys_created_on>2023-02-20 05:15:53</sys_created_on>
         <sys_id>05189eb247cd61108cf13c72846d4335</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="SAP S4 HANA RFC Spoke">866b1c231bf19010d2cf7669cc4bcba5</sys_scope>
-        <sys_updated_by>Akash</sys_updated_by>
-        <sys_updated_on>2023-02-20 05:57:35</sys_updated_on>
+        <sys_updated_by>akash</sys_updated_by>
+        <sys_updated_on>2023-03-14 08:06:38</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=05189eb247cd61108cf13c72846d4335"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4877,20 +4893,20 @@
         <sys_created_by>Akash</sys_created_by>
         <sys_created_on>2023-02-20 05:15:55</sys_created_on>
         <sys_id>55189eb247cd61108cf13c72846d4376</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>Akash</sys_updated_by>
-        <sys_updated_on>2023-02-20 05:57:35</sys_updated_on>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>akash</sys_updated_by>
+        <sys_updated_on>2023-03-14 08:06:38</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     try {
       	var inputs = SapRFCUtil.trimInputs(inputs);
-      	
+      	 
         //Validate mandatory fields
         var mandatoryFieldsList = {
             "Invoice Document Number": inputs.invoiceDocNumber,
             "Fiscal Year": inputs.fiscalYear,
             "Reversal Reason": inputs.reversalReason,
             "Reversal Document Posting Date": inputs.postingDate
-        };
+        }; 
 
         var emptyFields = SapRFCUtil.checkMandatoryFields(mandatoryFieldsList);
         if (JSUtil.notNil(emptyFields)) {
@@ -5070,6 +5086,18 @@
         <sys_updated_on>2023-02-20 05:50:26</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_05189eb247cd61108cf13c72846d4335</table>
         <value>{{action.REASONREVERSAL}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>05189eb247cd61108cf13c72846d4335</id>
+        <sys_created_by>akash</sys_created_by>
+        <sys_created_on>2023-03-14 07:52:07</sys_created_on>
+        <sys_id>3fce4c02c32d2910665b9d777d013134</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>akash</sys_updated_by>
+        <sys_updated_on>2023-03-14 07:52:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_05189eb247cd61108cf13c72846d4335^id=05189eb247cd61108cf13c72846d4335"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=05189eb247cd61108cf13c72846d4335"/>
@@ -8077,9 +8105,9 @@
         <sys_created_by>Akash</sys_created_by>
         <sys_created_on>2023-02-20 05:15:53</sys_created_on>
         <sys_id>7c189eb247cd61108cf13c72846d432c</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:37</sys_updated_on>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:46:30</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7c189eb247cd61108cf13c72846d432c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -8300,9 +8328,9 @@
         <sys_created_by>Akash</sys_created_by>
         <sys_created_on>2023-02-20 05:15:53</sys_created_on>
         <sys_id>7c189eb247cd61108cf13c72846d4326</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:37</sys_updated_on>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:46:30</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7c189eb247cd61108cf13c72846d4326"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -8599,9 +8627,9 @@
         <sys_created_by>Akash</sys_created_by>
         <sys_created_on>2023-02-20 05:15:57</sys_created_on>
         <sys_id>8a189eb247cd61108cf13c72846d43e9</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_updated_by>akash</sys_updated_by>
-        <sys_updated_on>2023-03-07 10:31:39</sys_updated_on>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_updated_by>varun</sys_updated_by>
+        <sys_updated_on>2023-03-17 13:46:32</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8a189eb247cd61108cf13c72846d43e9"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
